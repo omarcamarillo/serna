@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            list-style: none;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section.contact-seccion{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .contact-seccion h1{
+            font-weight: 400;
+            color: #494949;
+            font-size: 26px;
+        }
+        .contact-seccion .social-media{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-size: 22px;
+            color: #000;
+        }
+        .social-media .ri-mail-fill{
+            color: #A04747;
+        }
+        .social-media .ri-facebook-fill{
+            color: #0F67B1;
+        }
+        .social-media .ri-github-fill{
+            color: #000000;
+        }
+        /* Formulario */
+        form{
+            transition: all 200ms ease;
+            display: flex;
+            flex-direction: column;
+            padding: 40px 30px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin: 20px;
+            width: 100%;
+            max-width: 512px;
+            gap: 20px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        form .item-box{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 20px;
+            position: relative;
+        }
+        form .item-box label{
+            width: max-content;
+            background: #fff;
+            position: absolute;
+            top: -15px;
+            left: 15px;
+            font-weight: 300;
+        }
+        form .item-box input,
+        form .item-box textarea{
+            color: #000;
+            padding: 15px 15px;
+            font-size: 17px;
+            outline: none;
+            border: 1px solid #dddddd;
+            border-radius: 3px;
+        }
+        form .item-box textarea{
+            width: 100%;
+            max-width: 500px;
+            min-width: 428px;
+            
+            height: 150px;
+            min-height: 150px;
+            max-height: 150px;
+        }
+        form .item-box input:focus,
+        form .item-box textarea:focus{
+            border: 1px solid;
+            border-color: #42a2fd;
+        }
+        .buttons-general{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            width: 100%;
+        }
+        .buttons-general button, 
+        .buttons-general a{
+            display: block;
+            width: 100%;
+        }
+        .buttons-general button{
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            background: #000;
+            color: #fff;
+            border: 1px solid;
+            transition: all 300ms ease;
+        }
+        .buttons-general button:hover{
+            background: transparent;
+            color: #000;
+            cursor: pointer;
+            border-color: #000;
+        }
+        .buttons-general button.whatsapp-contact{
+            background: #54C392;
+        }
+        .buttons-general button.whatsapp-contact:hover{
+            color: #54C392;
+            border-color: #54C392;
+            background: transparent;
+        }
+        /* icono atras */
+        .home{
+            position: fixed;
+            bottom: 0;
+            color: #fff;
+            right: 0;
+            margin: 30px;
+            width: 50px;
+            height: 50px;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            border-radius: 8px;
+            background: #000000;
+            transition: all 300ms ease;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        .home:hover{
+            background: #54C392;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section class="contact-seccion">
+
+        <div class="titulo">
+            <h1>Contacta Conmigo</h1>
+
+            <div class="social-media">
+                <a href=""> <i class="ri-mail-fill"></i> </a>
+                <a href=""> <i class="ri-facebook-fill"></i> </a>
+                <a href=""> <i class="ri-github-fill"></i> </a>
+            </div>
+        </div>
+
+        <form action="/" method="get">
+
+            <div class="item-box">
+                <label for="name"> Nombre</label>
+                <input type="name" id="name" placeholder="Refacciones y Accesorios del Valle" required>
+            </div>
+            
+            <div class="item-box">
+                <label for="phone"> Mensaje</label>
+                <textarea name="messaja" id="messaje" placeholder="Refacciones y Accesorios del Valle, ¿Cual es el problema?"></textarea>
+            </div>
+            
+            <div class="buttons-general">
+                <a href="">
+                    <button class="whatsapp-contact">
+                        <i class="ri-whatsapp-line"></i> Whatsapp</button>
+                </a>
+                <button type="submit">Enviar Mensaje</button>
+            </div>
+
+        </form>
+    </section>
+
+    <a href="/" class="home">
+        <i class="ri-arrow-left-s-line"></i>
+    </a>
+</body>
+</html>
